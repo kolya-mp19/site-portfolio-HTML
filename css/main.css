@@ -1,0 +1,379 @@
+/*   */
+
+
+html, body /* для всего текста. наследуется по всей странице  */ {
+   font-family: 'PT Sans Caption', sans-serif;
+    font-size: 16px; /*базовый размер шрифта*/
+    line-height: 1.5; /*базовая высота строчки*/
+    min-width: 280px;
+}
+
+/*
+font-family: 'Merriweather', serif;
+font-family: 'PT Sans Caption', sans-serif;
+
+из гугл фаунтс скопировали для использования шрифтов
+*/
+
+ img {
+    display: inline-block; /* обнуляем отсутпы у картинки  */
+} 
+
+a {
+    transition: 0.2s ease-out;/* для плавного перехода при наведение на любую ссылку  */
+}
+
+/*  ко всем тегам применили - что бы если что сжимали контент подстраивая под экран */
+* {
+    box-sizing: border-box;
+}
+/* .......................................................
+
+Grid сетка
+
+........................................................ */
+
+.container {
+    width: 1140px; /* ширина задается макетом  */
+    margin-left:auto; /*  автоматический отступ слева */
+    margin-right:auto; /* автоматический отступ справа  */
+    
+}
+
+
+/* ряд  */
+.row {
+    
+    
+}
+
+/* сбрасываем обтикание, что бы корректно отоброжалось обтикание  */
+.row:after {
+    clear:both;
+    content:"";
+    display:table;
+}
+
+
+/* колонки  */
+.col-4 {
+    width: 360px; /* ширина задается макетом  */
+    margin-right: 30px; /* расстояние между картинками в макете  */
+    float: left; /* обтикание слева */
+}
+
+.col-4:last-child /* псевдо класс который выбирает последную колонку т.к. она не лезет в заданную ширину макета и нужно удалить отступ справа  */ 
+{
+    margin-right: 0px;
+    
+}
+
+
+/* .......................................................
+
+HEDER ШАПКА СТРАНИЦЫ
+
+........................................................ */
+
+
+.header /* точка означает что мы обращаемся к классу */
+{
+    background: #343c4e; /*подлкючили фоновый цвет */
+    background-image: url("../img/bg/bg-header.jpg"); /*подключили фоновую картинку */
+    background-repeat: no-repeat; /* говорим что бы не повторялся  */
+    background-position: center;
+    background-size:cover; /* пропорционально растягивался и заполнялся  */
+    
+    height: 100vh; /* заполняет 100% окна браузера  */
+    min-height: 400px;
+    
+    color: #FFF; /* белый цвет шрифта  */
+    text-align: center; /* выравниваем текст по центру  */
+    
+    /* далее выравниваем текст по ценру блока. Для этого исп флексбокс (css3).   */
+    display:flex;
+    flex-direction: column; /* разместили блоки в колонку т.к. флекс их выравнивает в строку  */
+    align-items: center; /* выравниваем по фентру окна  */
+    justify-content: center; /* выравниваем по фентру окна  */
+    
+    position: relative; /* говорим что блок "родитель"  */
+}
+
+.header_title
+{
+    font-size: 56px; /* указываем размер шрифта в пикселях */
+    line-height: 62px; /* высота строчки  */
+    margin-bottom: 30px; /* отступ снизу  */
+    font-family: 'Merriweather', serif; /* шрифт  */
+    margin-top: -50px; /* немного подвинул блок вверх */
+    
+}
+
+.header_slogan {
+    font-size: 28px;
+     line-height: 42px;
+    
+}
+
+.header_arrow {
+    font-size: 48px; /* размер  */
+/* background: red; */
+    width: 60px;
+    height: 50px;
+  /*  margin-left: 30px;  */
+    
+    
+    position: absolute; /* абсолютное позиционирование  */
+    bottom: 50px; /* отступ снизу  */
+    /* left: 50%; /* отступ слева  */
+    
+}
+
+/* .......................................................
+
+Portfolio
+
+........................................................ */
+
+.portfolio {
+    padding-top: 70px; /*  внутренний отступ сверху*/
+    padding-bottom: 100px; /*  внутренний отступ снизу*/
+}
+
+.portfolio-item  /*  отступы на случай 2го ряда работ*/{
+    margin-bottom: 20px;
+    
+    
+}
+
+.title {
+    font-size: 46px;
+    margin-bottom: 60px;
+    font-family: 'Merriweather', serif;  /* шрифт меривезер, если шрифт не найдется то любой шрифт из серии шериф  */
+    text-align:center; /* выровняли текст по центру  */
+    
+}
+
+.portfolio-item__img {
+    margin-bottom: 16px;
+    
+}
+
+/*  сделали селектор и в классе portfolio-item__img выбираются все img */
+.portfolio-item__img img {
+    max-width: 100%; /* максимальная ширина 100% контейнера  */
+    height: auto; /* высота авто для того что бы автоматически сама пропроционально ширине кадрировалась  */
+}
+
+.portfolio-item__titel {
+    font-size: 24px;
+    line-height: normal;
+    margin-bottom: 5px;
+    
+}
+
+.portfolio-item__text {
+    font-size: 16px;
+    line-height: 1,5;
+    
+}
+
+.portfolio-item__titel a /* стелизую ссылки  */ {
+    text-decoration: none; /* убрал стандартное подчеркиванеи  */
+    color: #000; /* цвет черный  */
+    border-bottom: 1px solid #FFF; /* задал свое подчеркивание, цвет белый  */
+    }
+
+.portfolio-item__titel a:hover /* описание ссылки при наведении курсора (ховер)  */ {
+    color: #0052C2; /* цвет ссылки как в макете  */
+    border-color: green; /* цвет нижнего подчеркиванеи из макета  */
+}
+
+.portfolio-item__text p {
+    marging-top: 0px; /* обнуляем  */
+    marging-bottom: 15px;
+}
+
+/* .......................................................
+
+Portfolio singl page
+
+........................................................ */
+
+.portfolio-singl-page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align:center;
+}
+
+.portfolio-singl-page img {
+    margin-bottom: 50px;
+    max-width: 100%;
+    height: auto;
+   
+}
+
+.button-back {
+    font-weight: 700;  /*  ширина шрифта. 700 похоже на болт - шрифт из макета */
+    text-decoration: none;
+    color:#0052C2;
+    text-transform: uppercase; /*  текст заглавными буквами */
+    letter-spacing: 1px;
+    display: inline-block; /*  кнопка должна иметь свойство блочного элемента и ее ширина должна равняться ширине контента в ней */
+    
+    border-width: 2px; /*  ширина рамки кнопки */
+    border-color:#0052C2; /*  цвет рамки */
+    border-style: solid; /*  стиль рамки - прямая линия */
+    border-radius: 50px;
+    
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 23px;
+    padding-right: 23px;
+    
+    margin-bottom: 13px; /*  отступ вниз от кнопки */
+    
+    transition: 0.2s ease-out;/* для плавного перехода при наведении  */
+}
+
+.button-back:hover {
+    color: #FFF;
+    background-color: #0052C2;
+}
+
+/* .......................................................
+
+footer подвал
+
+........................................................ */
+.footer {
+    background-color: #061634;
+    color: #6479a2;
+    padding-top: 90px;
+    padding-bottom: 190px;
+    
+}
+
+.footer p {
+    margin-top: 0px; /* у всех абзацов по умолчанию есть отступы я свожу их к 0  */
+    margin-bottom: 15px;
+}
+
+p.footer__name {
+    font-size: 28px;
+    margin-bottom: 10px;
+    line-height: normal;
+    font-family: 'Merriweather', serif; 
+}
+
+p.footer__social {
+    color: #FFF;
+    
+}
+
+p.footer__social-icons {
+    color: #FFF;
+    font-size: 32px;
+}
+
+p.footer__social-icons a {
+    color: #FFF;
+    text-decoration: none;
+    margin-right: 30px;
+    transition: 0.2s ease-out;/* для плавного перехода при наведении  */
+} /*  из тега р выбираем все а */
+
+p.footer__social-icons a:last-child {
+    margin-right: 0px;
+}
+
+p.footer__social-icons a:hover {
+    color: #FFE400;
+} /*  по наведению изменяет цвет а */
+
+.button {
+    font-weight: 700;  /*  ширина шрифта. 700 похоже на болт - шрифт из макета */
+    text-decoration: none;
+    color: #FFF;
+    text-transform: uppercase; /*  текст заглавными буквами */
+    letter-spacing: 1px;
+    display: inline-block; /*  кнопка должна иметь свойство блочного элемента и ее ширина должна равняться ширине контента в ней */
+    
+    border-width: 2px; /*  ширина рамки кнопки */
+    border-color: #FFF; /*  цвет рамки */
+    border-style: solid; /*  стиль рамки - прямая линия */
+    border-radius: 50px;
+    
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 23px;
+    padding-right: 23px;
+    
+    margin-bottom: 13px; /*  отступ вниз от кнопки */
+    
+    transition: 0.2s ease-out;/* для плавного перехода при наведении  */
+}
+
+.button:hover {
+    color: #061634;
+    background-color: #fff;
+} /*  изменяется цвет при наведении на кнопку */
+
+
+
+/* .......................................................
+
+media (медиа запросы, адаптация)
+
+........................................................ */
+
+/* при ширине  экрана в 1160 пх. Больше нельзя-меньше подходит. При этом будет выполнен запрос  */
+@media (max-width: 1160px) {
+    /* класс контейнер будет занимать 100% экрана,   */
+    .container {
+        width: 100%;
+    }
+    
+    /* колонка будет не в горизонтали а в ряд  */
+    .col-4 {
+        width: 100%;
+        /* реальная ширина=width: 100% + border=0 + padding=15+15  получается = 100%+30px   */
+        box-sizing: border-box;
+        margin: 0px;
+        margin-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+    
+    .header {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .header_title {
+        font-size: 38px;
+        line-height: 48px;
+        margin-bottom: 15px;
+    }
+    .header_slogan {
+        font-size: 22px;
+        line-height: 38px;
+        }
+    .portfolio {
+        padding-top:40px;
+        padding-bottom: 50px;
+    }
+    .title {
+        font-size: 36px;
+        }
+    .footer {
+        padding-top: 70px;
+        padding-bottom: 60px;
+    }
+}
+
+
+
+
+/*   */

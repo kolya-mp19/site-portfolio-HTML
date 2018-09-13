@@ -1,0 +1,173 @@
+<!DOCTYPE html> <!-- говорим что програем на штмл5 -->
+    <html lang="ru"> <!-- говорим что прогаем на русском -->
+        <head>
+           <meta charset="utf-8"> <!-- ввели кодировку утф -->
+            <title>Сайт портфолио</title> <!-- название сайта -->
+            
+            <!-- отображать страницу в масштабе 100%. не сжимать т.к. уже адаптировали под телефон -->
+            <meta name="viewport" content="wight=device-wight, initial-scale=1">
+            <!-- для IE -->
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+             
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+            <!-- Нормализация. это сцц библиотека для того что бы все шрифты отображались одинаково в разных браузерах. находиться в интернете в cdn хранилище. также сбрасывает отступы и все вплотную к краям страницы-->
+            
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">  <!-- подключается эконочный стиль фронавосса. находиться в интернете в cdn хранилище -->
+
+            
+            <link rel="stylesheet" href="css/main.css"> <!-- подключили файл с цсс -->
+           
+            
+            <link href="https://fonts.googleapis.com/css?family=Merriweather|PT+Sans+Caption:400,700" rel="stylesheet"> <!-- подключили шрифты из гугл фаунтс -->
+            
+            
+            
+            <link rel="shortcut icon" type="image/x-icon" href="img/favikon/favicon-16x16.png"> <!-- задали картинку-иконку сайта -->
+        </head>
+        <body>
+            
+<!-- .......................................................
+
+HEDER ШАПКА СТРАНИЦЫ
+
+........................................................ -->
+<!-- создаем блок  -->
+<div class="header" > <!-- div делает блок и мы уже потом можем менять высоту ширину и т.д. -->
+        <div class="header_title">Николай Головешкин</div>
+        <div class="header_slogan">Верстка сайта на HTML and CSS<br> HTML5 CSS3 JS</div>
+        <div class="header_arrow">
+    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </div> <!-- с сайта взял ссылку http://fontawesome.ru/icon/chevron-down/    -->         
+</div> 
+            
+            
+<!-- .......................................................
+
+PORTFOLIO НАШИ РАБОТА
+
+........................................................ -->
+<div class="portfolio">  <!-- общий контейнер -->
+      <div class="container"> <!--  -->
+          
+          <div class="title">
+          Портфолио
+          </div>
+          
+          <div class="row"> 
+              <!-- Работа в портфолио 1 -->
+                    <div class="col-4">
+                    <div class="portfolio-item__img">
+                        <img src="img/portfolio/project_organica.jpg".
+                             alt="Макет органик">
+                    </div>
+                    <div class="portfolio-item__titel">
+                    <a href="work-organika.html">Макет органик</a> <!-- сделали ссылку  -->
+                    </div>
+                    <div class="portfolio-item__text">
+                    <p>Верстка одностраничного сайта по PSD макету.</p>
+                    </div>
+                    </div>
+              <!-- //Работа в портфолио 1 завершена-->
+              
+              
+              <!-- Работа в портфолио 2-->
+                   <div class="col-4">
+                    <div class="portfolio-item__img">
+                        <img src="img/portfolio/project_apollo.jpg".
+                             alt="Учебный макет Аполло">
+                    </div>
+                    <div class="portfolio-item__titel">
+                    <a href="work-apollo.html">Учебный макет Аполло</a> <!-- сделали ссылку  -->
+                    </div>
+                    <div class="portfolio-item__text">
+                    <p>Верстка лендинга хостинг компании. Мобильная адаптивность.</p>
+                    </div>
+                  </div> 
+              <!-- //Работа в портфолио 2 завершена-->
+              
+              
+              <!-- Работа в портфолио 3-->
+                    <div class="col-4">
+                    <div class="portfolio-item__img">
+                        <img src="img/portfolio/project_portfolio.jpg".
+                             alt="Личный сайт портфолио">
+                    </div>
+                    <div class="portfolio-item__titel">
+                    <a href="work-portfolio.html">Личный сайт портфолио</a> <!-- сделали ссылку  -->
+                    </div>
+                    <div class="portfolio-item__text">
+                    <p>Верстка личного сайта портфолио на котором Вы сейчас находитесь.</p>
+                    </div>
+                   </div>    
+                
+              <!-- //Работа в портфолио 3 завершена-->
+              
+              
+          </div>
+      
+    </div>
+    
+    
+</div>
+            
+       
+            
+<!-- .......................................................
+
+FOOTER ПОДВАЛ СТРАНИЦЫ
+
+........................................................ -->
+    <div class="footer"> <!-- общий класс подвала -->
+        <div class="container"> <!-- весь контент -->
+            <div class="row"> <!-- ряд -->
+                <div class="col-4"> <!-- колонка -->
+                    <p class="footer__name">Николай Головешкин</p>
+                    <p>HTML верстка и разработка сайтов</p>
+                
+                </div>
+                
+                <div class="col-4"> <!-- колонка -->
+                    <p class="footer__social">Мой профиль в соцсетях</p>
+                    <p class="footer__social-icons">
+                        
+                        <a href="#" terget="_blank">
+                            <i class="fa fa-vk" aria-hidden="true"></i>
+                        </a> <!-- иконка вк. скачал из http://fontawesome.ru запихнул в тэг а для того что бы сделать ссылкой-->
+                       
+                        <a href="#" terget="_blank">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        
+                           <a href="#" terget="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        
+                           <a href="#" terget="_blank">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        
+                           <a href="#" terget="_blank">
+                            <i class="fa fa-youtube" aria-hidden="true"></i>
+                        </a>
+                    
+                    </p>
+                    
+                
+                </div>
+                
+                <div class="col-4"> <!-- колонка -->
+                    <div><a href="#" class="button" terget="_blank">Связаться Вконтакте</a></div>
+                    <p>Напишите мне, что бы заказать или узнать<br>стоимость верстки Вашего проекта</p>
+                
+                
+                </div>
+            </div>
+                        
+        </div>
+    </div>      
+            
+            
+            
+        </body>
+    </html>
+<!--  -->
